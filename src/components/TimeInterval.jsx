@@ -5,14 +5,14 @@ import Styled from "styled-components";
 import { HEIGHT_PER_MINUTE, MINUTES_PER_GRID } from "../constants";
 
 const Wrapper = Styled.div`
-  border-top:${(props) => (props.onhour ? "3px solid black" : "2px dashed black")};
+  border-top:${(props) => (props.on_hour ? "3px solid black" : "2px dashed black")};
   height:${HEIGHT_PER_MINUTE * MINUTES_PER_GRID}px;
   box-sizing:border-box;
 `;
 
 const TimeFont = Styled.div`
   font-size:14px;
-  font-weight:${(props) => (props.onhour ? 600 : 400)};
+  font-weight:${(props) => (props.on_hour ? 600 : 400)};
   width:80px;
   box-sizing:border-box;
   text-align:right;
@@ -30,8 +30,8 @@ export const TimeInterval = ({ time }) => {
   const timeFormat = timeMoment.format("h:mm A");
 
   return (
-    <Wrapper onhour={onHour}>
-      <TimeFont onhour={onHour}>{timeFormat}</TimeFont>
+    <Wrapper on_hour={onHour}>
+      <TimeFont on_hour={onHour}>{timeFormat}</TimeFont>
     </Wrapper>
   );
 };

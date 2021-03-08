@@ -26,14 +26,6 @@ const EventWrapper = Styled.div`
  
 `;
 
-const EventCanvas = Styled.div`
-  position:absolute;
-  top:0px;
-  left:0px;
-  bottom:0px;
-  right:0px;
-`;
-
 export const Calendar = () => {
   const [events, setEvents] = useState([]);
   useEffect(() => {
