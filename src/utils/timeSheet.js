@@ -3,7 +3,7 @@ import moment from "moment";
 import { CALENDAR_START_TIME, CALENDAR_END_TIME, MINUTES_PER_GRID } from "../constants";
 
 export const timeSheet = (() => {
-  const timeSheet = [];
+  let timeSheet = [];
   let startTime = moment(CALENDAR_START_TIME, ["HH:mm"]);
   let endTime = moment(CALENDAR_END_TIME, ["HH:mm"]);
   let currentTime = startTime;

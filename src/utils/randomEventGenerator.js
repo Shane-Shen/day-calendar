@@ -18,8 +18,8 @@ export const randomEventGenerator = () => {
     let eventStartRandomMins = Math.floor(Math.random() * EVENT_START_TIME_RANDOM_RANGE);
     let eventStartTime = EVENT_EARLIEST_START_TIME.clone().add(eventStartRandomMins, "minutes");
 
-    let EVENT_MAX_DURATION = EVENT_LATEST_END_TIME.diff(eventStartTime, "minutes");
-    let eventDurationRandom = Math.floor(Math.random() * EVENT_MAX_DURATION);
+    let eventMaxDuration = EVENT_LATEST_END_TIME.diff(eventStartTime, "minutes");
+    let eventDurationRandom = Math.floor(Math.random() * eventMaxDuration);
     let eventDuration = Math.max(eventDurationRandom, EVENT_MIN_DURATION);
     let eventEndTime = eventStartTime.clone().add(eventDuration, "minutes");
 
